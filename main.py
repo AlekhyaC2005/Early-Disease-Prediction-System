@@ -36,7 +36,7 @@ y=df[['heart_disease','stroke']]
 
 ct=ColumnTransformer([
     ('imputer',SimpleImputer(strategy='mean'),['bmi']),
-    ('OHE',OneHotEncoder(drop='first',sparse=False),['gender','ever_married',
+    ('OHE',OneHotEncoder(drop='first',sparse_output=False),['gender','ever_married',
        'work_type', 'Residence_type','smoking_status'])
 ],remainder='passthrough')
 
